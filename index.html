@@ -2,38 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Max | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flynn Maxwel - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="background" id="background"></div>
+  <div id="cursor-effect"></div>
+  <div class="loader">Loading...</div>
 
-  <div class="main-content">
-    <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
-    <div class="container">
-      <header>
-        <h1>Max's Portfolio</h1>
-        <nav>
-          <a href="#" onclick="loadSection('about')">About</a>
-          <a href="#" onclick="loadSection('blog')">Blog</a>
-          <a href="#" onclick="loadSection('poems')">Poems</a>
-          <a href="#" onclick="loadSection('projects')">Projects</a>
-          <a href="#" onclick="loadSection('contact')">Contact</a>
-        </nav>
-      </header>
+  <header>
+    <h1 class="logo">Flynn Maxwel</h1>
+    <nav>
+      <ul>
+        <li><button onclick="showPage('home')">Home</button></li>
+        <li><button onclick="showPage('projects')">Projects</button></li>
+        <li><button onclick="showPage('writings')">Writings</button></li>
+        <li><button onclick="showPage('contact')">Contact</button></li>
+      </ul>
+    </nav>
+  </header>
 
-      <main id="content">
-        <section>
-          <h2>Welcome</h2>
-          <p>Click a section to begin exploring.</p>
-        </section>
-      </main>
+  <main>
+    <section id="home" class="page active">
+      <h2>Welcome to My Digital World</h2>
+      <p>Crafting code & words with creativity.</p>
+    </section>
 
-      <footer>
-        <p>© 2025 Max. Crafted with purpose.</p>
-      </footer>
-    </div>
+    <section id="projects" class="page">
+      <h2>Projects</h2>
+      <p>Explore my AI, IoT, and Python creations.</p>
+    </section>
+
+    <section id="writings" class="page">
+      <h2>Writings</h2>
+      <p>Read my poems, stories, and blog reflections.</p>
+    </section>
+
+    <section id="contact" class="page">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Max. | <span onclick="reviewSite()">Site Feedback</span></p>
+  </footer>
+
+  <div id="review-box" class="hidden">
+    <h3>Review This Site</h3>
+    <textarea placeholder="What do you think?" rows="4"></textarea>
+    <button onclick="submitReview()">Submit</button>
   </div>
 
   <script src="script.js"></script>
