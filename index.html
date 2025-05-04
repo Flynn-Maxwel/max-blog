@@ -1,62 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Max | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="cursor-effect"></div>
-  <div class="loader">Welcome to Max's World...</div>
+    <div class="loader">Loading...</div>
+    <div id="cursor-effect"></div>
+    <header>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <ul>
+                <li><button data-page="home">Home</button></li>
+                <li><button data-page="about">About</button></li>
+                <li><button data-page="contact">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <div class="logo">Max</div>
-    <nav>
-      <ul>
-        <li><button data-page="home">Home</button></li>
-        <li><button data-page="projects">Projects</button></li>
-        <li><button data-page="writings">Writings</button></li>
-        <li><button data-page="contact">Contact</button></li>
-      </ul>
-    </nav>
-  </header>
+    <main>
+        <section id="home" class="page active">
+            <h1>Welcome Home</h1>
+            <p>This is the home page content.</p>
+        </section>
 
-  <main>
-    <section id="home" class="page active">
-      <h1>Welcome to My World</h1>
-      <p>Explore a minimalist, luxury web experience handcrafted by Max.</p>
-    </section>
+        <section id="about" class="page">
+            <h2>About Me</h2>
+            <p>Learn more about me here.</p>
+        </section>
 
-    <section id="projects" class="page">
-      <h1>Projects</h1>
-      <p>A showcase of my innovative AI & IoT works.</p>
-    </section>
+        <section id="contact" class="page">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-    <section id="writings" class="page">
-      <h1>Writings</h1>
-      <p>Poems, thoughts, and novels straight from the soul.</p>
-    </section>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
 
-    <section id="contact" class="page">
-      <h1>Contact</h1>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </section>
-  </main>
+    <div id="review-box">
+        <textarea id="review-text" placeholder="Leave a review..."></textarea>
+        <button onclick="submitReview()">Submit Review</button>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Max.</p>
-  </footer>
-
-  <div id="review-box" class="show">
-    <textarea placeholder="Leave a review or suggestion..."></textarea>
-    <button onclick="submitReview()">Submit</button>
-  </div>
+    <script src="script.js"></script>
 </body>
 </html>
