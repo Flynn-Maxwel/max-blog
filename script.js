@@ -1,30 +1,28 @@
-// Theme toggle
-function toggleTheme() {
-  document.body.classList.toggle('dark-mode');
+// script.js
+
+window.onload = () => {
+  document.querySelector('.loader').style.display = 'none';
 }
 
-// Page Sections
-const sections = {
-  about: `<section><h2>About Me</h2><p>I’m Max – a UI/UX learner, AI dev, poet & creative soul.</p></section>`,
-  blog: `<section><h2>Blog</h2><p>Where thoughts meet inspiration. Posts coming soon!</p></section>`,
-  poems: `<section><h2>Poems</h2><p>Feelings, faith, and fire – in words. Stay tuned.</p></section>`,
-  projects: `<section><h2>Projects</h2><p>AI, IoT, and magic in the making.</p></section>`,
-  contact: `<section><h2>Contact</h2><p>Email me at flynnmax@example.com or DM @flynnmaxwel</p></section>`
-};
-
-function loadSection(name) {
-  const content = document.getElementById('content');
-  content.style.opacity = 0; // Start fading out
-  setTimeout(() => {
-    content.innerHTML = sections[name] || '<section><h2>Not Found</h2><p>This section doesn’t exist yet.</p></section>';
-    content.style.opacity = 1; // Fade in
-  }, 500); // Delay for fade-out effect
+function showPage(id) {
+  const pages = document.querySelectorAll('.page');
+  pages.forEach(page => page.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
 }
 
-// Background cursor movement
-const bg = document.getElementById("background");
-document.addEventListener("mousemove", (e) => {
-  const x = e.clientX / window.innerWidth * 100;
-  const y = e.clientY / window.innerHeight * 100;
-  bg.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(0,0,0,0.06), transparent 70%)`;
+function reviewSite() {
+  document.getElementById('review-box').classList.toggle('show');
+}
+
+function submitReview() {
+  alert('Thanks for your feedback!');
+  document.getElementById('review-box').classList.remove('show');
+}
+
+// Background cursor interaction
+const effect = document.getElementById('cursor-effect');
+document.addEventListener('mousemove', (e) => {
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
+  effect.style.background = `radial-gradient(circle at ${x*100}% ${y*100}%, rgba(0,0,0,0.04), transparent 70%)`;
 });
