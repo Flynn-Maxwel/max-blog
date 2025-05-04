@@ -6,11 +6,16 @@ navList.addEventListener('click', (event) => {
     if (event.target.tagName === 'BUTTON') {
         const targetId = event.target.getAttribute('data-page');
 
+        // Add a class for the transition
         pages.forEach(page => {
             page.classList.remove('active');
+            page.classList.add('page-transition');
         });
 
-        document.getElementById(targetId).classList.add('active');
+        setTimeout(() => {
+            document.getElementById(targetId).classList.add('active');
+            document.getElementById(targetId).classList.remove('page-transition');
+        }, 100);
     }
 });
 
@@ -25,17 +30,13 @@ document.addEventListener('mousemove', (e) => {
 // Loader Fade Out (handled via CSS animation)
 
 // Review Box Submission with Email
-document.getElementById('review-submit-button').addEventListener('click', function() { // Changed to event listener
+document.getElementById('review-submit-button').addEventListener('click', function() {
     const textarea = document.getElementById('review-text');
     const reviewText = textarea.value.trim();
 
     if (reviewText) {
-        // Use a service like EmailJS (https://www.emailjs.com/) to send emails from the frontend
-        // 1.  Sign up for EmailJS and get your User ID, Service ID, and Template ID.
-        // 2.  Install EmailJS:  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-        // 3.  Initialize EmailJS (replace with your keys):
-        emailjs.init('YOUR_USER_ID'); // Replace with your actual EmailJS user ID
-        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', { // Replace with your Service ID and Template ID
+        emailjs.init('YOUR_USER_ID');
+        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
             to_email: 'flynnmaxwel7@gmail.com',
             message: reviewText,
         })
@@ -54,7 +55,8 @@ document.getElementById('review-submit-button').addEventListener('click', functi
 
 // Optional: Ensure the first page is active on load if no other logic sets it.
 document.addEventListener('DOMContentLoaded', () => {
-    const firstPage = document.querySelector('.page');
+    con
+st firstPage = document.querySelector('.page');
     if (firstPage && !document.querySelector('.page.active')) {
         firstPage.classList.add('active');
     }
