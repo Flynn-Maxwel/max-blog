@@ -3,43 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flynn Maxwel - Portfolio</title>
+  <title>Max | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div id="cursor-effect"></div>
-  <div class="loader">Loading...</div>
+  <div class="loader">Welcome to Max's World...</div>
 
   <header>
-    <h1 class="logo">Flynn Maxwel</h1>
+    <div class="logo">Max</div>
     <nav>
       <ul>
-        <li><button onclick="showPage('home')">Home</button></li>
-        <li><button onclick="showPage('projects')">Projects</button></li>
-        <li><button onclick="showPage('writings')">Writings</button></li>
-        <li><button onclick="showPage('contact')">Contact</button></li>
+        <li><button data-page="home">Home</button></li>
+        <li><button data-page="projects">Projects</button></li>
+        <li><button data-page="writings">Writings</button></li>
+        <li><button data-page="contact">Contact</button></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section id="home" class="page active">
-      <h2>Welcome to My Digital World</h2>
-      <p>Crafting code & words with creativity.</p>
+      <h1>Welcome to My World</h1>
+      <p>Explore a minimalist, luxury web experience handcrafted by Max.</p>
     </section>
 
     <section id="projects" class="page">
-      <h2>Projects</h2>
-      <p>Explore my AI, IoT, and Python creations.</p>
+      <h1>Projects</h1>
+      <p>A showcase of my innovative AI & IoT works.</p>
     </section>
 
     <section id="writings" class="page">
-      <h2>Writings</h2>
-      <p>Read my poems, stories, and blog reflections.</p>
+      <h1>Writings</h1>
+      <p>Poems, thoughts, and novels straight from the soul.</p>
     </section>
 
     <section id="contact" class="page">
-      <h2>Contact Me</h2>
+      <h1>Contact</h1>
       <form>
         <input type="text" placeholder="Your Name" required />
         <input type="email" placeholder="Your Email" required />
@@ -50,15 +51,12 @@
   </main>
 
   <footer>
-    <p>© 2025 Max. | <span onclick="reviewSite()">Site Feedback</span></p>
+    <p>&copy; 2025 Max.</p>
   </footer>
 
-  <div id="review-box" class="hidden">
-    <h3>Review This Site</h3>
-    <textarea placeholder="What do you think?" rows="4"></textarea>
+  <div id="review-box" class="show">
+    <textarea placeholder="Leave a review or suggestion..."></textarea>
     <button onclick="submitReview()">Submit</button>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
