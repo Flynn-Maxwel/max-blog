@@ -2,125 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Max's Rich Blog</title>
-  
-  <!-- Embedded CSS -->
-  <style>
-    /* Loader */
-    #loader {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: #0d0d0d;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-    }
-    .typewriter {
-      font-family: monospace;
-      font-size: 1.5rem;
-      color: #ffffff;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: .15em solid orange;
-      animation: typing 2s steps(22), blink .75s step-end infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 22ch }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #121212;
-      color: #fff;
-      transition: background 0.4s, color 0.4s;
-    }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 2rem;
-    }
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .glow {
-      font-size: 3rem;
-      color: #ffd700;
-      text-shadow: 0 0 10px #ffd700, 0 0 20px #fff;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #aaa;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #ffd700;
-    }
-    .theme-toggle {
-      position: fixed;
-      top: 10px; right: 10px;
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-    section {
-      margin-top: 2rem;
-      animation: fadeIn 1s ease-in;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    footer {
-      margin-top: 4rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-    }
-    .light-mode {
-      background: #f7f7f7;
-      color: #000;
-    }
-    .light-mode nav a {
-      color: #333;
-    }
-    .light-mode nav a:hover {
-      color: #000;
-    }
-    .light-mode .glow {
-      text-shadow: 0 0 10px #333, 0 0 20px #ddd;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Max | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Custom Loading Screen -->
-  <div id="loader">
-    <h1 class="typewriter">Loading Max's World...</h1>
-  </div>
+  <div class="background" id="background"></div>
 
-  <!-- Main Content -->
-  <div class="main-content" style="display:none">
+  <div class="main-content">
     <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
     <div class="container">
       <header>
-        <h1 class="glow">Max's Portfolio</h1>
+        <h1>Max's Portfolio</h1>
         <nav>
           <a href="#" onclick="loadSection('about')">About</a>
           <a href="#" onclick="loadSection('blog')">Blog</a>
           <a href="#" onclick="loadSection('poems')">Poems</a>
-          <a href="#" onclick="loadSection('novel')">Novel</a>
           <a href="#" onclick="loadSection('projects')">Projects</a>
           <a href="#" onclick="loadSection('contact')">Contact</a>
         </nav>
@@ -129,43 +26,16 @@
       <main id="content">
         <section>
           <h2>Welcome</h2>
-          <p>Click a section to get started.</p>
+          <p>Click a section to begin exploring.</p>
         </section>
       </main>
 
       <footer>
-        <p>© 2025 Max. Designed for inspiration.</p>
+        <p>© 2025 Max. Crafted with purpose.</p>
       </footer>
     </div>
   </div>
 
-  <!-- Embedded JavaScript -->
-  <script>
-    // Loading screen
-    window.addEventListener('load', () => {
-      document.getElementById('loader').style.display = 'none';
-      document.querySelector('.main-content').style.display = 'block';
-    });
-
-    // Theme toggle
-    function toggleTheme() {
-      document.body.classList.toggle('light-mode');
-    }
-
-    // Load page sections
-    const sections = {
-      about: `<section><h2>About Me</h2><p>Hello, I'm Max – a passionate coder, writer, and designer.</p></section>`,
-      blog: `<section><h2>Blog</h2><p>Coming soon: thoughts, tech tips, and life lessons!</p></section>`,
-      poems: `<section><h2>Poems</h2><p>Emotions inked with elegance. Stay tuned!</p></section>`,
-      novel: `<section><h2>Novel</h2><p>Dive into a world crafted by emotions and experience.</p></section>`,
-      projects: `<section><h2>Projects</h2><p>Smart IoT, AI Assistants, Creative Tools, and more.</p></section>`,
-      contact: `<section><h2>Contact</h2><p>Reach out via GitHub @Flynn-Maxwel or email: flynnmax@example.com</p></section>`
-    };
-
-    function loadSection(name) {
-      const content = document.getElementById('content');
-      content.innerHTML = sections[name] || '<section><h2>Not Found</h2><p>This section is missing.</p></section>';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
