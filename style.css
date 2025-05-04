@@ -1,180 +1,181 @@
 /* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html, body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #0a0a0a;
-  color: #f5f5f5;
-  overflow-x: hidden;
-  height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+    overflow-x: hidden;
+    height: 100%;
 }
 
 /* Cursor background effect */
 #cursor-effect {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 /* Loader */
 .loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #0a0a0a;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  z-index: 10;
-  animation: fadeOut 2s 2s forwards;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    z-index: 10;
+    animation: fadeOut 2s 2s forwards;
 }
 
 @keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
 
 /* Header */
 header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.5rem 2rem;
-  background-color: #111;
-  position: sticky;
-  top: 0;
-  z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background-color: #111;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
 }
 
 nav ul {
-  display: flex;
-  gap: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none; /* Moved list-style here */
 }
 
 nav ul li {
-  list-style: none;
+    /* No specific styling needed here anymore */
 }
 
 nav ul li button {
-  background: transparent;
-  border: none;
-  color: #f5f5f5;
-  font-size: 1rem;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  transition: background 0.3s ease;
+    background: transparent;
+    border: none;
+    color: #f5f5f5;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
 }
 
 nav ul li button:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
 }
 
 /* Pages */
 .page {
-  display: none;
-  padding: 4rem 2rem;
-  min-height: 80vh;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+    display: none;
+    padding: 4rem 2rem;
+    min-height: 80vh;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .page.active {
-  display: block;
-  opacity: 1;
+    display: block;
+    opacity: 1;
 }
 
 /* Form */
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
-  margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin-top: 2rem;
 }
 
 form input, form textarea {
-  padding: 0.75rem;
-  border: 1px solid #444;
-  background-color: #1a1a1a;
-  color: #f5f5f5;
-  border-radius: 8px;
+    padding: 0.75rem;
+    border: 1px solid #444;
+    background-color: #1a1a1a;
+    color: #f5f5f5;
+    border-radius: 8px;
 }
 
 form button {
-  background-color: #ffffff;
-  color: #000;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 form button:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #888;
-  background-color: #0c0c0c;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #888;
+    background-color: #0c0c0c;
 }
 
 /* Review Box */
 #review-box {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  width: 300px;
-  background: #111;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255,255,255,0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  z-index: 9;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    width: 300px;
+    background: #111;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 9;
 }
 
 #review-box textarea {
-  background: #222;
-  border: none;
-  color: #f5f5f5;
-  resize: none;
-  padding: 0.5rem;
-  border-radius: 8px;
-  height: 80px;
+    background: #222;
+    border: none;
+    color: #f5f5f5;
+    resize: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    height: 80px;
 }
 
 #review-box button {
-  background: #fff;
-  color: #000;
-  border: none;
-  padding: 0.5rem;
-  border-radius: 8px;
-  cursor: pointer;
+    background: #fff;
+    color: #000;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 8px;
+    cursor: pointer;
 }
