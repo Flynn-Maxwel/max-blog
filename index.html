@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> </head>
 <body>
     <div class="loader">Loading...</div>
     <div id="cursor-effect"></div>
@@ -28,15 +28,18 @@
 
         <section id="about" class="page">
             <h2>About Me</h2>
-            <p>Learn more about me here.</p>
+            <p>Hey there! I'm Max — a B.Tech Computer Science (AI & ML) student with a heart full of creativity and a mind wired for innovation.</p>
+            <p>I build things that think, write words that feel, and believe in turning even the smallest idea into something powerful. From AI projects to poems, novels to web design — this space is where all my passions come together.</p>
+            <p>This site isn’t just a portfolio — it's a reflection of who I am. Simple. Clean. Personal. A place where technology meets art, and everything tells a story.</p>
+            <p>Welcome to my world. Minimal, thoughtful, and uniquely mine.</p>
         </section>
 
         <section id="contact" class="page">
             <h2>Contact Us</h2>
             <form id="contact-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <textarea placeholder="Your Message"></textarea>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
                 <button type="submit">Send Message</button>
             </form>
         </section>
@@ -44,11 +47,16 @@
 
     <footer>
         <p>&copy; 2025 My Portfolio</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/yourinstagramhandle" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i> /yourinstagramhandle</a>
+            <a href="https://www.pinterest.com/yourpinteresthandle" target="_blank" aria-label="Pinterest"><i class="fab fa-pinterest"></i> /yourpinteresthandle</a>
+            <a href="https://www.linkedin.com/in/yourlinkedinprofile" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> /yourlinkedinprofile</a>
+        </div>
     </footer>
 
     <div id="review-box">
         <textarea id="review-text" placeholder="Leave a review..."></textarea>
-        <button onclick="submitReview()">Submit Review</button>
+        <button id="review-submit-button">Submit Review</button>
     </div>
 
     <script src="script.js"></script>
