@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+
   <div class="container">
     <header>
       <h1 class="glow">Max's Blog</h1>
       <nav>
         <a href="#about">About</a>
         <a href="#blog">Blog</a>
+        <a href="#poems">Poems</a>
+        <a href="#novel">Novel</a>
+        <a href="#projects">AI Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -20,7 +25,7 @@
     <main>
       <section id="about">
         <h2>About Me</h2>
-        <p>I’m Max — a poet, coder, and dreamer. Welcome to my digital world.</p>
+        <p>I’m Max — a poet, coder, and dreamer. Welcome to my luxury-coded life.</p>
       </section>
 
       <section id="blog">
@@ -35,6 +40,27 @@
         </div>
       </section>
 
+      <section id="poems">
+        <h2>My Poems</h2>
+        <p>“Even the silence echoes your name.” <br> – from Max’s diary</p>
+      </section>
+
+      <section id="novel">
+        <h2>Novel Preview</h2>
+        <p><strong>Title:</strong> *A Soul the World Forgot*<br>
+        A tale of pain, love, and the war between logic and emotion.</p>
+      </section>
+
+      <section id="projects">
+        <h2>AI Projects</h2>
+        <ul>
+          <li>🌊 Smart AI Sea Buoy</li>
+          <li>🚑 IoT Ambulance Tracker</li>
+          <li>🧠 Project Lazarus (Auto-repairing AI)</li>
+          <li>💡 AI Mood-based Lighting</li>
+        </ul>
+      </section>
+
       <section id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:max@example.com">max@example.com</a></p>
@@ -43,8 +69,16 @@
     </main>
 
     <footer>
-      <p>© 2025 Max. Crafted with code & heart 🖤</p>
+      <p>© 2025 Max. Coded by hand. Fueled by passion.</p>
     </footer>
+  </div>
+
+  <!-- Floating Music Player -->
+  <div class="music-player">
+    <audio controls autoplay loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3" />
+      Your browser doesn't support audio.
+    </audio>
   </div>
 
   <script src="script.js"></script>
