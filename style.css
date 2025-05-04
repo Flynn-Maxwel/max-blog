@@ -1,0 +1,119 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f8f8;
+  color: #111;
+  transition: background 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* Interactive Background */
+.background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.05), transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+  z-index: 10;
+  padding: 2rem;
+}
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding-top: 60px; /* Offset for fixed navbar */
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+nav a {
+  margin: 0 1.5rem;
+  text-decoration: none;
+  color: #555;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #000;
+}
+
+/* Sections */
+section {
+  margin-top: 2rem;
+  animation: fadeIn 1s ease-in-out;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Light & Dark Modes */
+body.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
+}
+body.dark-mode nav a {
+  color: #ccc;
+}
+body.dark-mode nav a:hover {
+  color: #fff;
+}
+body.dark-mode .background {
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05), transparent 80%);
+}
+
+/* Smooth Transitions */
+#content {
+  transition: opacity 1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+}
